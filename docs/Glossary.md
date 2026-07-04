@@ -19,13 +19,9 @@
 
 ## 2. 基础图论术语
 
-### 平面地图 / Planar Map
-
-固定嵌入在平面上的连通图；若无特别说明，默认不含自环与重边。
-
 ### 平面图 / Planar Graph
 
-可以在平面上无边交叉嵌入的图。本文通常从平面地图视角讨论，以保留嵌入信息。
+可以在平面上无边交叉嵌入的图。本文当前统一以平面图作为主术语；若强调某一具体嵌入，再在上下文中显式说明。
 
 ### 顶点 / Vertex
 
@@ -115,6 +111,42 @@
 
 指某个需求并非偶发出现，而是在允许的局部变换范围内仍持续存在。
 
+### 允许局部变换 / Allowed Local Transformation
+
+指在给定图与当前着色状态中，被理论正式允许执行的局部重着色、交换或有限步修正操作，用以定义“可达状态邻域”与“持续性”。
+
+### 可达状态邻域 / Reachable State Neighborhood
+
+指从某个初始着色状态出发，在给定步数上界或不设步数上界的条件下，可由允许局部变换到达的状态集合。
+
+### 冻结球 / Frozen Ball
+
+指围绕某个顶点的局部球形邻域，在指定允许变换范围内保持阻塞或保持结构不变的工作性局部对象。
+
+### 持续需求核 / Persistent Demand Core
+
+指在允许局部变换作用下仍持续维持第五色需求的顶点或局部阻塞中心。本文第 6 节的中心命题以此为真正研究对象，而不是静态的 $F(v,\varphi)=1$ 事件。
+
+### 最小消除步长 / Minimal Elimination Length
+
+指消除某个局部持续需求所需的最少允许局部变换步数，用于衡量阻塞强度与局部可消除性的距离。
+
+### 需求见证子图 / Demand Witness Subgraph
+
+指承载某个持续需求核的极小连通局部子图；在该子图支撑范围内执行允许局部变换，仍不能消除相应需求。
+
+### 双核连接体 / Double-Core Connector
+
+指两个不同持续需求核在共存时被强迫诱导出的连通结构对象，记作 $\Xi(u,v;\varphi)=H_u\cup P\cup H_v$。
+
+### 平面压缩约束 / Planar Compression Constraint
+
+指由平面性、围长下界与 3-正则条件共同施加在双核连接体上的面-边-点结构限制。
+
+### 有限构型族 / Finite Configuration Family
+
+指在平面压缩约束下，所有剩余双核候选可被压缩进的有限个局部同构类型集合；本文记作 $\mathfrak{C}_{\mathrm{double}}$。
+
 ### 局部可消除性 / Local Eliminability
 
 指第五色需求可通过有限次允许的局部变换被消除。
@@ -129,7 +161,7 @@
 
 ### 唯一性主张 / Uniqueness Claim
 
-指当前论文中的中心研究命题：在最小围长大于 3 的、3-正则的任意平面地图上，最多只有一个顶点具有第五色需求。
+指当前论文中的中心研究命题：在最小围长大于 3 的、3-正则的任意平面图上，最多只有一个顶点具有持续第五色需求，等价地说，至多存在一个持续需求核。
 
 ---
 
@@ -158,14 +190,15 @@
 为避免同一术语出现多种写法，当前建议优先采用以下统一形式：
 
 1. Fifth-Color Demand: 第五色需求
-2. Coloring State Space: 着色状态空间
-3. Obstruction Propagation Graph: 阻碍传播图
-4. Fifth-Color Core: 第五色核心
-5. Persistent Fifth-Color Demand: 持续第五色需求
-6. Local Eliminability: 局部可消除性
-7. Unavoidable Configuration: 不可避免构型
-8. Unavoidable Set: 不可避免集
-9. Cubic Graph: 3-正则图 或 cubic graph
+2. Persistent Fifth-Color Demand: 持续第五色需求
+3. Persistent Demand Core: 持续需求核
+4. Allowed Local Transformation: 允许局部变换
+5. Reachable State Neighborhood: 可达状态邻域
+6. Demand Witness Subgraph: 需求见证子图
+7. Double-Core Connector: 双核连接体
+8. Planar Compression Constraint: 平面压缩约束
+9. Finite Configuration Family: 有限构型族
+10. Cubic Graph: 3-正则图 或 cubic graph
 
 ---
 
@@ -173,7 +206,7 @@
 
 以下索引以 papers/PAPER.md 当前章节编号为准，用于快速定位术语首次被正式引入或集中说明的位置。
 
-- 平面地图 / Planar Map: papers/PAPER.md 第 2.1 节“平面地图、围长与 3-正则”
+- 平面图 / Planar Graph: papers/PAPER.md 第 2.1 节“平面图、围长与 3-正则”
 - 围长 / Girth: papers/PAPER.md 第 1.2 节首次记号出现；第 2.1 节“平面地图、围长与 3-正则”集中定义
 - 度数 / Degree: papers/PAPER.md 第 1.2 节首次记号出现；第 2.1 节“平面地图、围长与 3-正则”集中说明
 - 3-正则 / Cubic or 3-Regular: papers/PAPER.md 第 2.1 节“平面地图、围长与 3-正则”
@@ -189,9 +222,18 @@
 - 阻碍传播图 / Obstruction Propagation Graph: papers/PAPER.md 第 1.2 节首次记号出现；第 4.1 节“阻碍传播”集中说明
 - 第五色核心 / Fifth-Color Core: papers/PAPER.md 第 4.2 节“第五色核心”
 - 持续第五色需求 / Persistent Fifth-Color Demand: papers/PAPER.md 第 2.7 节“持续第五色需求”
+- 允许局部变换 / Allowed Local Transformation: papers/PAPER.md 第 2.4 节“允许局部变换族”
+- 可达状态邻域 / Reachable State Neighborhood: papers/PAPER.md 第 2.4 节“可达状态邻域”
+- 冻结球 / Frozen Ball: papers/PAPER.md 第 2.4 节“冻结球”
+- 持续需求核 / Persistent Demand Core: papers/PAPER.md 第 2.7 节“持续第五色需求”
+- 最小消除步长 / Minimal Elimination Length: papers/PAPER.md 第 2.8 节“最小消除步长”
 - 局部可消除性 / Local Eliminability: papers/PAPER.md 第 2.8 节“局部可消除性”
 - 需求传播 / Demand Propagation: papers/PAPER.md 第 3 节“研究动机与结构转向”；第 4.1 节“阻碍传播”
 - 双核共存 / Dual-Core Coexistence: papers/PAPER.md 第 3 节“研究动机与结构转向”首次提出；第 6.2 节“该命题为何合理”进入中心论证语境
+- 需求见证子图 / Demand Witness Subgraph: papers/PAPER.md 第 6.7 节“第二步的起点：双核结构化引理”
+- 双核连接体 / Double-Core Connector: papers/PAPER.md 第 6.7 节“第二步的起点：双核结构化引理”
+- 平面压缩约束 / Planar Compression Constraint: papers/PAPER.md 第 6.8 节“第三步：平面排除引理”
+- 有限构型族 / Finite Configuration Family: papers/PAPER.md 第 6.9 节“第四步：有限构型压缩命题”
 - 唯一性主张 / Uniqueness Claim: papers/PAPER.md 第 6.1 节“中心命题”；第 6.3 节“当前逻辑地位”
 - 理论框架 / Framework: papers/PAPER.md 第 1.1 节“文稿定位与仓库对应关系”
 - 论文主稿 / Paper Draft: papers/PAPER.md 第 1.1 节“文稿定位与仓库对应关系”

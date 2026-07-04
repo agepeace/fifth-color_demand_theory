@@ -109,6 +109,22 @@ $$
 
 图 $G$ 的着色状态空间。
 
+### $\mathfrak{T}(G)$
+
+图 $G$ 上允许局部变换组成的变换族。
+
+### $\mathcal{N}_r(\varphi)$
+
+从着色状态 $\varphi$ 出发，在至多 $r$ 步允许局部变换内可达的状态邻域。
+
+### $\mathcal{N}_*(\varphi)$
+
+从着色状态 $\varphi$ 出发，在任意有限步允许局部变换下可达的全局可达状态邻域。
+
+### $B_t(v)$
+
+以顶点 $v$ 为中心、半径为 $t$ 的局部球形邻域；在持续性讨论中也承担冻结球的工作性角色。
+
 ### $\mathcal{P}(G)$
 
 图 $G$ 的阻碍传播图。
@@ -122,6 +138,30 @@ $$
 ### $C_5(G)$
 
 图 $G$ 的第五色核心，即在相关可达状态中持续体现第五色需求的顶点集合。
+
+### $\ell(v,\varphi)$
+
+顶点 $v$ 在状态 $\varphi$ 下对应需求的最小消除步长。
+
+### $H_u, H_v$
+
+围绕持续需求核 $u,v$ 选取的极小需求见证子图。
+
+### $P$
+
+连接两个极小需求见证子图的最短路径。
+
+### $\Xi(u,v;\varphi)$
+
+由两个需求见证子图与其中间最短连接路径组成的双核连接体：
+
+$$
+\Xi(u,v;\varphi)=H_u\cup P\cup H_v.
+$$
+
+### $\mathfrak{C}_{\mathrm{double}}$
+
+满足平面压缩约束后剩余双核候选构型组成的有限构型族。
 
 ### $\Phi(\varphi)$
 
@@ -145,7 +185,7 @@ $$
 
 ### $\mathfrak{C}$
 
-可作为某类候选构型族的集合记号，用于后续不可避免构型分类。
+一般性的候选构型族集合记号。当前主稿中更具体地使用 $\mathfrak{C}_{\mathrm{double}}$ 表示双核候选族。
 
 ### $\mathfrak{U}$
 
@@ -161,12 +201,12 @@ $$
 
 ## 7. 当前双语对照重点
 
-1. available-color set 对应 $D(v,\varphi)$
-2. fifth-color demand indicator 对应 $F(v,\varphi)$
-3. coloring state space 对应 $\mathcal{S}(G)$
-4. obstruction propagation graph 对应 $\mathcal{P}(G)$
-5. fifth-color core 对应 $C_5(G)$
-6. potential function 对应 $\Phi(\varphi)$
+1. allowed local transformation family 对应 $\mathfrak{T}(G)$
+2. reachable state neighborhood 对应 $\mathcal{N}_r(\varphi)$
+3. full reachable state neighborhood 对应 $\mathcal{N}_*(\varphi)$
+4. demand witness subgraph 对应 $H_u, H_v$
+5. double-core connector 对应 $\Xi(u,v;\varphi)$
+6. finite configuration family 对应 $\mathfrak{C}_{\mathrm{double}}$
 
 ---
 
@@ -184,13 +224,22 @@ $$
 - $D(v,\varphi)$: papers/PAPER.md 第 1.2 节“记号约定”首次出现；第 2.2 节“颜色需求”正式定义
 - $F(v,\varphi)$: papers/PAPER.md 第 1.2 节“记号约定”首次出现；第 2.3 节“第五色需求”正式说明
 - $\mathcal{S}(G)$: papers/PAPER.md 第 1.2 节“记号约定”首次出现；第 2.4 节“着色状态空间”正式定义
+- $\mathfrak{T}(G)$: papers/PAPER.md 第 2.4 节“允许局部变换族”
+- $\mathcal{N}_r(\varphi)$: papers/PAPER.md 第 2.4 节“可达状态邻域”
+- $\mathcal{N}_*(\varphi)$: papers/PAPER.md 第 2.4 节“可达状态邻域”
+- $B_t(v)$: papers/PAPER.md 第 2.4 节“冻结球”
 - $\mathcal{P}(G)$: papers/PAPER.md 第 1.2 节“记号约定”首次出现；第 4.1 节“阻碍传播”集中说明
 - $u \to v$: papers/PAPER.md 第 4.1 节“阻碍传播”
 - $C_5(G)$: papers/PAPER.md 第 4.2 节“第五色核心”
 - $\Phi(\varphi)$: papers/PAPER.md 第 4.3 节“势函数”
+- $\ell(v,\varphi)$: papers/PAPER.md 第 2.8 节“最小消除步长”
+- $H_u, H_v$: papers/PAPER.md 第 6.7 节“第二步的起点：双核结构化引理”
+- $P$: papers/PAPER.md 第 6.7 节“第二步的起点：双核结构化引理”
+- $\Xi(u,v;\varphi)$: papers/PAPER.md 第 6.7 节“第二步的起点：双核结构化引理”
+- $\mathfrak{C}_{\mathrm{double}}$: papers/PAPER.md 第 6.9 节“第四步：有限构型压缩命题”
 - $\Delta(G)$: 当前主稿尚未正式使用，仅在本记号表中预留
 - $\psi$: papers/PAPER.md 第 2.8 节“局部可消除性”
-- $\mathfrak{C}$: 当前主稿尚未正式使用，仅在本记号表中预留
+- $\mathfrak{C}$: 当前主稿作为一般构型族预留；第 6.9 节具体使用 $\mathfrak{C}_{\mathrm{double}}$
 - $\mathfrak{U}$: 当前主稿尚未正式使用，仅在本记号表中预留
 - $\Gamma(v)$: 当前主稿尚未正式使用，仅在本记号表中预留
 
