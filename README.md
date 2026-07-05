@@ -166,7 +166,7 @@ Core files:
 
 ## Current Milestone
 
-Stage 0: build the mathematical language and consolidate the first paper draft.
+Stage 0: build the mathematical language and consolidate the first research paper.
 
 Current tasks:
 
@@ -203,13 +203,13 @@ Any result inherited from classical graph theory must cite its source. New conce
 
 Current paper target:
 
-中文：在最小围长大于 3 的、3-正则的任意平面图上，最多只有一个顶点具有持续第五色需求。
+中文：在最小围长大于 3 的、3-正则的任意平面图上，最多只有一个顶点具有持续第五色需求，等价地说，至多存在一个持续需求核。
 
-English: On any cubic planar graph of girth greater than three, at most one vertex can exhibit a persistent fifth-color demand.
+English: On any cubic planar graph of girth greater than three, at most one vertex can exhibit a persistent fifth-color demand; equivalently, at most one persistent demand core can occur.
 
 Current status:
 
-The repository now contains a structured paper draft in `papers/PAPER.md`. The claim above is supported by a closed working proof chain built from definitions, connector lemmas, finite configuration compression, class-by-class exclusion, and a closing uniqueness argument. It is not yet presented as a final theorem-grade proof.
+The repository now contains a structured research paper in `papers/PAPER.md`. The claim above is supported by a closed working proof chain built from definitions, connector lemmas, finite configuration compression, class-by-class exclusion, and a closing uniqueness argument. It is not yet presented as a final theorem-grade proof.
 
 ---
 

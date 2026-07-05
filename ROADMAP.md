@@ -2,9 +2,9 @@
 
 ## 总目标
 
-围绕以下中心命题推进 FCD Theory 的定理化：在最小围长大于 3 的、3-正则的任意平面地图上，最多只有一个顶点具有第五色需求。
+围绕以下中心命题推进 FCD Theory 的定理化：在最小围长大于 3 的、3-正则的任意平面地图上，最多只有一个顶点具有持续第五色需求。
 
-Central target: On any planar cubic map of girth greater than three, at most one vertex can exhibit a fifth-color demand.
+Central target: On any planar cubic map of girth greater than three, at most one vertex can exhibit a persistent fifth-color demand.
 
 ## Volume 0
 
@@ -12,7 +12,7 @@ Central target: On any planar cubic map of girth greater than three, at most one
 
 任务：
 
-1. 统一“颜色需求”“第五色需求”“状态空间”等核心术语。
+1. 统一“颜色需求”“第五色需求”“持续第五色需求”“状态空间”等核心术语。
 2. 明确定义、命题、猜想、定理的层级边界。
 
 ## Volume I
@@ -23,7 +23,7 @@ Central target: On any planar cubic map of girth greater than three, at most one
 
 1. 定义围长、度数、3-正则与平面地图语境。
 2. 定义不可避免构型与不可避免集在本理论中的角色。
-3. 定义第五色核心与传播图。
+3. 定义第五色核心、持续需求核与传播图。
 
 ## Volume II
 
@@ -31,7 +31,7 @@ Central target: On any planar cubic map of girth greater than three, at most one
 
 任务：
 
-1. 研究第五色需求的传播链与阻碍传播图。
+1. 研究持续第五色需求的传播链与阻碍传播图。
 2. 研究势函数如何限制多需求共存。
 3. 分析无三角、3-正则条件下的双核压缩机制。
 
