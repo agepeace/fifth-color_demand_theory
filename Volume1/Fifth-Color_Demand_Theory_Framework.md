@@ -129,7 +129,7 @@ For planar graphs with girth ≥ 4,
 
 Refined target in the current framework:
 
-For planar cubic maps with girth greater than 3, at most one vertex can exhibit persistent fifth-color demand.
+For planar graphs with girth at least 5, at most one vertex can exhibit persistent fifth-color demand.
 
 Important:
 

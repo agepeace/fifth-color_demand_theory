@@ -1,224 +1,113 @@
-# Fifth-Color Demand Theory (FCD Theory)
+# 第五色需求理论（FCD Theory）
 
-> A Structural Theory of Planar Graph Coloring
-
----
-
-## Project Vision
-
-This project does not aim to re-prove the Four Color Theorem directly.
-
-Its goal is to build a mathematical framework for describing the origin, propagation, interaction, and elimination of **Fifth-Color Demand** in planar graph coloring. The Four Color Theorem is treated as a possible application of this framework, not as its starting point.
+> 关于平面图着色的结构理论
 
 ---
 
-## Current Status
+## 项目愿景
 
-✅ Stage 0
+本项目不直接重证四色定理。
 
-Foundation construction. The repository has now formed a closed working proof chain for the current central claim, while still remaining at the stage of definitions, structure, and proof refinement rather than final theorem packaging.
-
----
-
-## Guiding Principles
-
-1. Definitions come before theorems.
-2. Every statement must have a clear status: Definition, Proposition, Lemma, Theorem, Corollary, Conjecture, Observation, or Open Problem.
-3. Intuition must not be presented as proof.
-4. Established notation should remain stable across later chapters.
-5. Each chapter should be independently readable.
+其目标是建立一套数学框架，用于描述平面图着色中**第五色需求**的产生、传播、相互作用与消除。四色定理被视为该框架的一个可能应用，而非出发点。
 
 ---
 
-## Research Philosophy
+## 当前状态
 
-Traditional graph coloring often follows the line
+✅ 阶段 0
 
-Graph -> Coloring -> Proof
-
-FCD Theory instead emphasizes
-
-Coloring States -> Dynamics -> Propagation -> Potential -> Structure -> Theorem
+基础建设。仓库已围绕当前中心命题形成一条闭合的工作性证明链，但仍处于定义、结构与证明打磨阶段，尚未进入最终定理封装。
 
 ---
 
-## Long-term Objectives
+## 研究原则
 
-Volume 0 -> Foundations of Thinking  
-Volume I -> Foundations  
-Volume II -> Structure Theory  
-Volume III -> Applications  
-Software -> Tool Support  
-AI-assisted Discovery -> Long-term research assistance
-
----
-
-## Repository Structure
-
-FCD-Theory/
-
-├── README.md
-
-│   项目总览、研究原则与阶段说明
-
-├── ROADMAP.md
-
-│   研究推进路线与阶段目标
-
-├── CHANGELOG.md
-
-│   版本变更记录（当前为占位）
-
-├── LICENSE
-
-│   仓库许可与草稿状态说明
-
-├── CONTRIBUTING.md
-
-│   协作规范（当前为占位）
-
-│
-
-├── docs/
-
-│ ├── Glossary.md
-
-│ │   术语表（已同步持续需求与双核结构术语）
-
-│ ├── Notation.md
-
-│ │   记号表（已同步持续需求与双核结构记号）
-
-│ ├── Bibliography.md
-
-│ │   参考文献整理（待扩充）
-
-│ ├── OpenProblems.md
-
-│ │   开放问题列表（待扩充）
-
-│ └── ResearchLog.md
-
-│     研究日志与问题跟踪
-
-│
-
-├── Volume0/
-
-│   基础思想与方法论预留目录
-
-├── Volume1/
-
-│ └── Fifth-Color_Demand_Theory_Framework.md
-
-│     理论框架、核心对象与中心猜想
-
-├── Volume2/
-
-│   结构理论与引理链预留目录
-
-├── Volume3/
-
-│   应用方向预留目录
-
-│
-
-├── examples/
-
-│   示例图、局部构型与反例搜索预留目录
-
-├── figures/
-
-│   图示、结构图与论文插图预留目录
-
-├── algorithms/
-
-│   算法化分析与程序原型预留目录
-
-├── software/
-
-│   后续软件实现预留目录
-
-├── experiments/
-
-│   实验记录与验证输出预留目录
-
-├── papers/
-
-│ └── PAPER.md
-
-│     当前论文主稿
-
-└── archive/
-
-	历史草稿与归档材料预留目录
-
-
-Core files:
-
-- README.md: 项目总览、研究原则与阶段说明
-- ROADMAP.md: 研究推进路线与阶段目标
-- papers/PAPER.md: 当前论文主稿
-- Volume1/Fifth-Color_Demand_Theory_Framework.md: 理论框架与核心对象
-- docs/ResearchLog.md: 研究日志与开放问题跟踪
+1. 定义先于定理。
+2. 每个陈述必须有明确状态：定义、命题、引理、定理、推论、猜想、观察或开放问题。
+3. 直觉不得作为证明呈现。
+4. 已确立的记号应在后续章节中保持稳定。
+5. 每章应可独立阅读。
 
 ---
 
-## Current Milestone
+## 研究哲学
 
-Stage 0: build the mathematical language and consolidate the first research paper.
+传统图着色研究通常遵循如下路线
 
-Current tasks:
+图 -> 着色 -> 证明
 
-- [x] Establish notation and terminology scaffolding
-- [x] Define Coloring State Space and local persistence interfaces
-- [x] Align the paper structure with the repository structure
-- [x] Refine the central claim into a lemma-based proof program
-- [x] Enumerate the working finite double-core configuration family
-- [x] Write I-IV class exclusion lemmas for the working configuration family
-- [ ] Refine each exclusion lemma into tighter local configuration checks
-- [ ] Convert the working proof chain into a stricter theorem-grade version
+FCD Theory 则强调
 
-No final theorem claim should be made before these refinements are complete.
+着色状态 -> 动力学 -> 传播 -> 势函数 -> 结构 -> 定理
 
 ---
 
-## Research Workflow
+## 长期目标
 
-Every new idea should pass through the following pipeline:
-
-Idea -> Definition -> Examples -> Counterexamples -> Properties -> Conjecture -> Proof -> Application
-
-Ideas are never promoted directly into theorems.
-
----
-
-## Citation Policy
-
-Any result inherited from classical graph theory must cite its source. New concepts introduced by FCD Theory should explicitly indicate whether they are `Draft`, `Experimental`, or `Stable`.
+- Volume 0 -> 思想基础
+- Volume I -> 基础理论
+- Volume II -> 结构理论
+- Volume III -> 应用
+- 软件 -> 工具支撑
+- AI 辅助发现 -> 长期研究辅助
 
 ---
 
-## Paper Focus
+## 当前里程碑
 
-Current paper target:
+阶段 0：搭建数学语言并整合第一篇研究论文。
 
-中文：在最小围长大于 3 的、3-正则的任意平面图上，最多只有一个顶点具有持续第五色需求，等价地说，至多存在一个持续需求核。
+当前任务：
 
-English: On any cubic planar graph of girth greater than three, at most one vertex can exhibit a persistent fifth-color demand; equivalently, at most one persistent demand core can occur.
+- [x] 建立记号与术语脚手架
+- [x] 定义着色状态空间与局部持续性接口
+- [x] 论文结构与仓库结构对齐
+- [x] 将中心命题细化为基于引理的证明程序
+- [x] 枚举工作性有限双核构型族
+- [x] 为工作构型族撰写 I–IV 类排除引理
+- [ ] 将各排除引理打磨为更紧的局部构型检验
+- [ ] 将工作证明链转化为更严格的定理级版本
 
-Current status:
-
-The repository now contains a structured research paper in `papers/PAPER.md`. The claim above is supported by a closed working proof chain built from definitions, connector lemmas, finite configuration compression, class-by-class exclusion, and a closing uniqueness argument. It is not yet presented as a final theorem-grade proof.
+在上述打磨完成之前，不应做出最终定理声明。
 
 ---
 
-## License
+## 研究工作流
 
-Research Draft
+每个新想法应经过如下流水线：
 
-Version 0.1
+想法 -> 定义 -> 例子 -> 反例 -> 性质 -> 猜想 -> 证明 -> 应用
 
-Last Updated
+想法不得直接提升为定理。
+
+---
+
+## 引用政策
+
+凡继承自经典图论的结果，必须注明出处。FCD Theory 引入的新概念应明确标注其为 `草稿`、`实验性` 或 `稳定`。
+
+---
+
+## 论文焦点
+
+当前论文目标：
+
+在最小围长大于等于 5 的任意平面图上，最多只有一个顶点具有持续第五色需求，等价地说，至多存在一个持续需求核。
+
+English: On any planar graph of girth at least five, at most one vertex can exhibit a persistent fifth-color demand; equivalently, at most one persistent demand core can occur.
+
+当前状态：
+
+仓库已在 `papers/PAPER.md` 中包含一篇结构化研究论文。上述命题由一条闭合的工作性证明链支撑，该链由定义、连接引理、有限构型压缩、逐类排除与收尾唯一性论证构成。目前尚未以最终定理级证明的形式呈现。
+
+---
+
+## 许可
+
+研究草稿
+
+版本 0.1
+
+最后更新
 
 2026-07-05

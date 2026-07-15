@@ -2,9 +2,9 @@
 
 ## 总目标
 
-围绕以下中心命题推进 FCD Theory 的定理化：在最小围长大于 3 的、3-正则的任意平面地图上，最多只有一个顶点具有持续第五色需求。
+围绕以下中心命题推进 FCD Theory 的定理化：在最小围长大于等于 5 的任意平面地图上，最多只有一个顶点具有持续第五色需求。
 
-Central target: On any planar cubic map of girth greater than three, at most one vertex can exhibit a persistent fifth-color demand.
+Central target: On any planar map of girth at least five, at most one vertex can exhibit a persistent fifth-color demand.
 
 ## Volume 0
 
@@ -64,3 +64,47 @@ Central target: On any planar cubic map of girth greater than three, at most one
 1. 从实验中归纳新的局部引理候选。
 2. 用 AI 辅助构造与筛选证明路线。
 3. 维护从猜想到定理的可追踪研究流。
+
+---
+
+## 仓库结构
+
+```
+FCD-Theory/
+├── README.md                      项目总览、研究原则与阶段说明
+├── ROADMAP.md                     研究推进路线与阶段目标
+├── CHANGELOG.md                   版本变更记录（当前为占位）
+├── LICENSE                        仓库许可与草稿状态说明
+├── CONTRIBUTING.md                协作规范（当前为占位）
+│
+├── docs/
+│   ├── Glossary.md                术语表（已同步持续需求与双核结构术语）
+│   ├── Notation.md                记号表（已同步持续需求与双核结构记号）
+│   ├── Bibliography.md            参考文献整理（待扩充）
+│   ├── OpenProblems.md            开放问题列表（待扩充）
+│   └── ResearchLog.md             研究日志与问题跟踪
+│
+├── Volume0/                       基础思想与方法论预留目录
+├── Volume1/
+│   └── Fifth-Color_Demand_Theory_Framework.md   理论框架、核心对象与中心猜想
+├── Volume2/                       结构理论与引理链预留目录
+├── Volume3/                       应用方向预留目录
+│
+├── examples/                      示例图、局部构型与反例搜索预留目录
+├── figures/                       图示、结构图与论文插图预留目录
+├── algorithms/                    算法化分析与程序原型预留目录
+├── software/                      后续软件实现预留目录
+├── experiments/                   实验记录与验证输出预留目录
+│
+├── papers/
+│   └── PAPER.md                   当前论文主稿
+└── archive/                       历史草稿与归档材料预留目录
+```
+
+核心文件：
+
+- `README.md`：项目总览、研究原则与阶段说明
+- `ROADMAP.md`：研究推进路线与阶段目标
+- `papers/PAPER.md`：当前论文主稿
+- `Volume1/Fifth-Color_Demand_Theory_Framework.md`：理论框架与核心对象
+- `docs/ResearchLog.md`：研究日志与开放问题跟踪
