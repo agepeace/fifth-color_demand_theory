@@ -91,15 +91,13 @@ $$
 
 顶点 $v$ 在状态 $\varphi$ 下的第五色需求指标函数。
 
-约定：
+### $\pi(v,\varphi)$
 
-$$
-F(v,\varphi)=
-\begin{cases}
-1, & D(v,\varphi)=\varnothing,\\
-0, & D(v,\varphi)\neq\varnothing.
-\end{cases}
-$$
+顶点 $v$ 在状态 $\varphi$ 下的色压，定义为 $4-|D(v,\varphi)|$。
+
+### $F^{\dagger}(v,\varphi)$
+
+顶点 $v$ 在状态 $\varphi$ 下的广义第五色需求指标函数。约定当 $|D(v,\varphi)|\le 1$ 时取值为 1，否则为 0。
 
 ---
 
@@ -171,6 +169,14 @@ $$
 \Xi(u,v;\varphi)=H_u\cup P\cup H_v.
 $$
 
+### $\mathfrak{P}_{\partial}$
+
+极小见证边界的有限候选表，用于收集单口、双口与回返三类接口原型的离散代表元。
+
+### $R_H$
+
+由回返原型压缩得到的最短必要面带，常用于描述临界回返结构的边界对象。
+
 ### $\mathfrak{C}_{\mathrm{double}}$
 
 满足平面压缩约束后剩余双核候选构型组成的有限构型族。
@@ -180,10 +186,10 @@ $$
 着色状态 $\varphi$ 的势函数，定义为
 
 $$
-\Phi(\varphi)=\sum_{v\in V(G)} F(v,\varphi).
+\Phi(\varphi)=\sum_{v\in V(G)} F^{\dagger}(v,\varphi).
 $$
 
-其作用是统计一个状态中的第五色需求总量，为后续单调性分析预留接口。
+其作用是统计一个状态中的广义第五色需求总量；静态版本 $\sum F(v,\varphi)$ 可视为较早接口的特例。
 
 ---
 
@@ -235,6 +241,8 @@ $$
 - $\varphi$: papers/PAPER.md 第 1.2 节“记号约定”
 - $D(v,\varphi)$: papers/PAPER.md 第 1.2 节“记号约定”首次出现；第 2.2 节“颜色需求”正式定义
 - $F(v,\varphi)$: papers/PAPER.md 第 1.2 节“记号约定”首次出现；第 2.3 节“第五色需求”正式说明
+- $\pi(v,\varphi)$: papers/PAPER.md 第 1.2 节“记号约定”首次出现；第 2.3a 节“色压与广义第五色需求”正式定义
+- $F^{\dagger}(v,\varphi)$: papers/PAPER.md 第 1.2 节“记号约定”首次出现；第 2.3a 节“色压与广义第五色需求”正式定义
 - $\mathcal{S}(G)$: papers/PAPER.md 第 1.2 节“记号约定”首次出现；第 2.4 节“着色状态空间”正式定义
 - $\mathfrak{T}(G)$: papers/PAPER.md 第 2.4 节“允许局部变换族”
 - $\mathcal{N}_r(\varphi)$: papers/PAPER.md 第 2.4 节“可达状态邻域”
@@ -248,6 +256,8 @@ $$
 - $H_u, H_v$: papers/PAPER.md 第 6.7 节“第二步的起点：双核结构化引理”
 - $P$: papers/PAPER.md 第 6.7 节“第二步的起点：双核结构化引理”
 - $\Xi(u,v;\varphi)$: papers/PAPER.md 第 6.7 节“第二步的起点：双核结构化引理”
+- $\mathfrak{P}_{\partial}$: papers/PAPER.md 第 6.6 节“接口原型的有限候选表”
+- $R_H$: papers/PAPER.md 第 6.6 节“回返原型的最短面带化”
 - $\mathfrak{C}_{\mathrm{double}}$: papers/PAPER.md 第 6.9 节“第四步：有限构型压缩命题”
 - $\Delta(G)$: 当前主稿尚未正式使用，仅在本记号表中预留
 - $\psi$: papers/PAPER.md 第 2.8 节“局部可消除性”

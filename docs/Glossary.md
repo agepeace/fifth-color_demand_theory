@@ -91,6 +91,14 @@
 
 记作 $F(v,\varphi)$。当顶点 $v$ 在状态 $\varphi$ 下具有第五色需求时取值为 1，否则为 0。
 
+### 色压 / Color Pressure
+
+记作 $\pi(v,\varphi)$，定义为 $4-|D(v,\varphi)|$。它用于度量在当前部分着色状态下有多少颜色已被阻断。
+
+### 广义第五色需求 / Generalized Fifth-Color Demand
+
+记作 $F^{\dagger}(v,\varphi)$。当 $|D(v,\varphi)|\le 1$ 时取值为 1，否则为 0。它是本文在 3-正则图上继续研究第五色需求时采用的工作性扩展对象。
+
 ### 部分 4-着色 / Partial 4-Coloring
 
 仅对部分顶点赋予 $\{1,2,3,4\}$ 中颜色、且已赋色顶点之间满足合法性的着色状态。
@@ -126,6 +134,14 @@
 ### 持续需求核 / Persistent Demand Core
 
 指在允许局部变换作用下仍持续维持第五色需求的顶点或局部阻塞中心。本文第 6 节的中心命题以此为真正研究对象，而不是静态的 $F(v,\varphi)=1$ 事件。
+
+### 工作性证明链 / Working Proof Chain
+
+指 PAPER.md 第 6 节当前已经写出的、从对象定义经过结构化引理、有限构型压缩、逐类排除再到闭合回推的论证链。它表明中心命题已经具有连续论证主线，但尚未达到最终定理级证明。
+
+### 局部刚性 / Local Rigidity
+
+指某一局部接口原型或候选构型在有限冻结球内不能再被削弱、收缩或替代的性质；它是后续微型构型枚举与逐类排除中最常用的局部约束。
 
 ### 最小消除步长 / Minimal Elimination Length
 
@@ -171,7 +187,7 @@
 
 ### 唯一性主张 / Uniqueness Claim
 
-指当前论文中的中心研究命题：在最小围长大于等于 5 的任意平面图上，最多只有一个顶点具有持续第五色需求，等价地说，至多存在一个持续需求核。
+指当前论文中的中心研究命题：在最小围长大于等于 5 的任意平面图上，最多只有一个顶点具有持续第五色需求，等价地说，至多存在一个持续需求核。当前将其作为工作性命题处理，并由 PAPER.md 第 6 节的工作性证明链支撑，尚未达到最终定理级证明。
 
 ---
 
@@ -181,9 +197,9 @@
 
 指对对象、关系、命题层级和研究边界的整体组织方式。目前由 Volume1 文档承担。
 
-### 论文主稿 / Paper Draft
+### 论文主稿 / Research Paper
 
-指 papers/PAPER.md，对外承担当前最完整的连续论述。
+指 papers/PAPER.md，对外承担当前最完整的连续论述。该文当前仍是工作性研究论文，而不是最终定理稿。
 
 ### 路线图 / Roadmap
 
@@ -200,15 +216,19 @@
 为避免同一术语出现多种写法，当前建议优先采用以下统一形式：
 
 1. Fifth-Color Demand: 第五色需求
-2. Persistent Fifth-Color Demand: 持续第五色需求
-3. Persistent Demand Core: 持续需求核
-4. Allowed Local Transformation: 允许局部变换
-5. Reachable State Neighborhood: 可达状态邻域
-6. Demand Witness Subgraph: 需求见证子图
-7. Double-Core Connector: 双核连接体
-8. Planar Compression Constraint: 平面压缩约束
-9. Finite Configuration Family: 有限构型族
-10. Cubic Graph: 3-正则图 或 cubic graph
+2. Color Pressure: 色压
+3. Generalized Fifth-Color Demand: 广义第五色需求
+4. Persistent Fifth-Color Demand: 持续第五色需求
+5. Persistent Demand Core: 持续需求核
+6. Working Proof Chain: 工作性证明链
+7. Local Rigidity: 局部刚性
+8. Allowed Local Transformation: 允许局部变换
+9. Reachable State Neighborhood: 可达状态邻域
+10. Demand Witness Subgraph: 需求见证子图
+11. Double-Core Connector: 双核连接体
+12. Planar Compression Constraint: 平面压缩约束
+13. Finite Configuration Family: 有限构型族
+14. Cubic Graph: 3-正则图 或 cubic graph
 
 ---
 
@@ -246,7 +266,7 @@
 - 有限构型族 / Finite Configuration Family: papers/PAPER.md 第 6.9 节“第四步：有限构型压缩命题”
 - 唯一性主张 / Uniqueness Claim: papers/PAPER.md 第 6.1 节“中心命题”；第 6.3 节“当前逻辑地位”
 - 理论框架 / Framework: papers/PAPER.md 第 1.1 节“文稿定位与仓库对应关系”
-- 论文主稿 / Paper Draft: papers/PAPER.md 第 1.1 节“文稿定位与仓库对应关系”
+- 论文主稿 / Research Paper: papers/PAPER.md 第 1.1 节“文稿定位与仓库对应关系”
 - 路线图 / Roadmap: papers/PAPER.md 第 1.1 节“文稿定位与仓库对应关系”
 - 研究日志 / Research Log: papers/PAPER.md 第 1.1 节“文稿定位与仓库对应关系”
 

@@ -2,13 +2,13 @@
 
 ## A Foundational Framework for Studying the Origin, Propagation, and Uniqueness of Fifth-Color Demand
 
-> **Status:** Research Framework (Version 0.1)
+> **Status:** Research Framework (Working Proof Chain Version 0.1)
 
 ## Abstract
 
 This document proposes a research framework named **Fifth-Color Demand Theory (FCD Theory)**. Rather than attempting to directly re-prove the Four Color Theorem, the framework introduces new mathematical objects centered on the concept of *fifth-color demand* and studies their structural properties.
 
-The objective is to build a rigorous theory from definitions to conjectures, providing a foundation for future proofs or counterexamples.
+The objective is to build a rigorous theory from definitions to working propositions and proof skeletons, providing a foundation for future theorem-level validation or counterexamples.
 
 ---
 
@@ -57,7 +57,11 @@ D(v,φ) denotes the set of colors still available to vertex v.
 
 If D(v,φ)=∅, vertex v is said to exhibit a fifth-color demand.
 
-This is a local property.
+This is a local property. The current PAPER.md also uses the color pressure
+
+π(v,φ)=4-|D(v,φ)|
+
+and the generalized fifth-color demand indicator F†(v,φ), where F†(v,φ)=1 when |D(v,φ)|≤1. This generalized version is the active object in the current cubic-graph proof skeleton.
 
 ---
 
@@ -109,9 +113,9 @@ Define a graph potential Φ(G).
 
 Candidate:
 
-Φ(G)=Σ I(F(v))
+Φ(φ)=Σ F†(v,φ)
 
-where I is the indicator of fifth-color demand.
+where F† is the generalized fifth-color demand indicator.
 
 Long-term objective:
 
@@ -119,21 +123,22 @@ Show Kempe transformations monotonically decrease Φ.
 
 ---
 
-# 7. Central Conjecture
+# 7. Central Working Proposition
 
-## Fifth-Color Core Uniqueness Conjecture
+## Fifth-Color Core Uniqueness Working Proposition
 
-For planar graphs with girth ≥ 4,
+For planar graphs with girth at least 5,
 
 |C₅(G)| ≤ 1
 
-Refined target in the current framework:
+Historical note: an earlier draft used a weaker girth target, but the current repository target is the girth-at-least-5 version above.
 
+Current framework target:
 For planar graphs with girth at least 5, at most one vertex can exhibit persistent fifth-color demand.
 
 Important:
 
-This is currently a conjecture, **not a theorem**.
+This is currently supported by a working proof chain in PAPER.md, but it is not yet a theorem-level proof.
 
 ---
 
@@ -194,4 +199,4 @@ Critical graphs, minimal counterexamples, and applications to planar graph color
 
 # Notes
 
-This framework is exploratory and intentionally avoids claiming unproven results. Every conjecture should be validated through rigorous proof or explicit counterexample.
+This framework is exploratory and intentionally avoids claiming final theorem-level results prematurely. Every conjecture or working proposition should be validated through rigorous proof or explicit counterexample.

@@ -104,10 +104,10 @@ English: On any planar graph of girth at least five, at most one vertex can exhi
 
 ## 许可
 
-研究草稿
+研究论文（工作性版本）
 
 版本 0.1
 
 最后更新
 
-2026-07-05
+2026-07-16
